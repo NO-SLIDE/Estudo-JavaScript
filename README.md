@@ -418,3 +418,323 @@ let nomeCompleto = {nome: "Edilson", idade: 90} //object
 // let quartos = 3;
 // let preco = calcularImovel(metragem, quartos);
 // console.log(`A casa custa R$ ${preco}`);
+
+// ##Exercícios de Funções:
+
+// // Crie uma função que valide usuário e senha
+// Usuário correto: admin
+// Senha correta: 123
+
+// Uso da função:
+// function validar(usuario, senha) {
+//         if(usuario === 'admin' && senha === '123') {
+//                 return true;
+//         } else {
+//                 return false;
+//         }
+// }
+
+// let usuario = "admin";
+// let senha = '123';
+// let validacao = validar(usuario, senha);
+// if (validacao) {
+//         console.log("Acesso concedido.");
+// } else {
+//         console.log("Acesso Negado!");
+// }
+// __________________________________________________
+// ##Arrow Function
+
+// function somar(x, y) {
+//         return x + y;
+// }
+        // Ou
+// const somar = (x, y) => {
+//         return x + y;
+// }
+        // Ou
+// const somar = (x, y) => x + y;
+
+// console.log(somar(10, 5));
+// __________________________________________________
+// ##Variáveis dentro de funções:
+
+// let count = 0; //Variável de escopo global
+
+// function add() {
+//         // let count = 0 //Variável de escopo local tem prioridade
+//         count++;
+// }
+
+// add();
+// add();
+
+// console.log(count);
+// __________________________________________________
+// ##Funções dentro de Funções:
+
+// function square(x) {
+//         return x * x;
+// }
+
+// console.log(square(2));
+
+
+// function square(x) {
+//         return x * x;
+// }
+
+// function addSquares(a, b) {
+//         let sqrA = square(a);
+//         let sqrB = square(b);
+//         return sqrA + sqrB;
+// }
+
+// console.log(addSquares(2, 3));
+        // Ou
+
+// function addSquares(a, b) {
+//         const square = (x) => x * x;
+        
+//         let sqrA = square(a);
+//         let sqrB = square(b);
+//         return sqrA + sqrB;
+// }
+        
+// console.log(addSquares(2, 3));
+// __________________________________________________
+// ##Introdução a Array:
+
+// let colors = ['blue', 'red', 'green'];
+
+// console.log(colors)
+// console.log(colors[2])
+
+// Resultado:
+// (3) ['blue', 'red', 'green']
+// 0: "blue"
+// 1: "red"
+// 2: "green"
+// length: 3
+// [[Prototype]]: Array(0)
+
+//green]
+
+// let lista = ['algo', 30, 'blabla', true];
+
+// console.log(lista)
+
+// Resultado:
+// (4) ['algo', 30, 'blabla', true]
+// 0: "algo"
+// 1: 30
+// 2: "blabla"
+// 3: true
+// length: 4
+// [[Prototype]]: Array(0)
+// exemplo:        0         __1__
+//                          0     1
+// let lista = ['blabla', ['xx', 30]];
+
+// console.log(lista[1][0]);
+
+// Resultado:
+// xx
+// __________________________________________________
+// ##Operações básicas de Array:
+
+// let ingredientes = [
+//         'agua',
+//         'farinha',
+//         'ovo',
+//         'corante',
+//         'sal'
+// ];
+
+// console.log(ingredientes)
+//         Ou
+
+// let ingredientes = [
+//         'agua',
+//         'farinha',
+//         'ovo',
+//         'corante',
+//         'sal'
+// ];
+
+// // ingredientes.push('cebola')
+
+// // ingredientes.pop();
+
+// // ingredientes.shift();
+
+// console.log(ingredientes)
+
+// console.log(`Total de ingredientes: ${ingredientes.length}`);
+
+// __________________________________________________
+// ##Exercícios de array:
+
+// 1. No array abaixo, qual o número que pega a Ferrari?
+// let carros = ['BMW', 'Ferrari', 'Mercedes'];
+// // let x = 1
+// console.log('1. ' + carros[1])
+
+// // 2. Troque a Ferrari por Audi
+// let carros = ['BMW', 'Ferrari', 'Mercedes'];
+// carros[1] = 'Audi';
+// console.log('2. Lista com Audi:');
+// // console.log(carros)
+
+// // 3. Adicione o Volvo a lista
+// carros.push('Volvo');
+// console.log('3. Lista com Volvo:');
+// console.log(carros);
+
+// // 4. Exiba quantos itens tem no array
+// console.log('4. Itens no array:');
+// console.log(carros.length);
+
+// __________________________________________________
+// ##O que são objetos?
+
+// let nome = 'Edilson';
+// let nomes = ['Edilson', 'Pedro'];
+// let personagem = {
+//     nome: 'Edilson',
+//     idade: 90,
+//     pais: 'Brasil'    
+// }
+
+// console.log(personagem.nome);
+//         // Ou
+// console.log(`${personagem.nome} tem ${personagem.idade} anos e mora no ${personagem.pais}`)
+
+// let personagem = {
+//     nome: 'Edilson',
+//     idade: 90,
+//     pais: 'Brasil',
+//     olhos: ['verde', 'azul'],
+//     caracteristicas: {
+//         forca: 50,
+//         stamina: 15,
+//         magia: 5
+//     }   
+// }
+
+// console.log(`${personagem.nome} tem ${personagem.idade} anos e mora no ${personagem.pais}`);
+// console.log(personagem.olhos[1]);
+// console.log(`Força: ${personagem.caracteristicas.forca}`);
+// console.log(`Stamina: ${personagem.caracteristicas.stamina}`);
+// console.log(`Magia: ${personagem.caracteristicas.magia}`);
+// __________________________________________________
+// ##Acessando e alterando objetos
+
+// let personagem = {
+//     nome: 'Edilson',
+//     idade: 90,
+//     pais: 'Brasil',
+//     olhos: ['preto', 'azul'],
+//     caracteristicas: {
+//         forca: 20,
+//         stamina: 15,
+//         magia: 5
+//     }   
+// }
+
+// personagem.nome = 'Pedro';
+
+
+// console.log(personagem.nome)
+// personagem.caracteristicas.forca+= 5;
+// console.log(`Força: ${personagem.caracteristicas.forca}`);
+// personagem.olhos.push('verde');
+
+// console.log(personagem.olhos);
+
+// let personagem = {
+//         nome: 'Edilson',
+//         idade: 90,
+//         carros: [
+//                 {modelo: 'Fiat', cor: 'preto'},
+//                 {modelo: 'Ferrari', cor: 'vermelho'}
+//         ]
+// }
+
+// console.log(personagem.carros[0].modelo);
+// __________________________________________________
+// ##Função dentro de objeto
+
+// let pessoa = {
+//         nome: 'Edilson',
+//         sobrenome: 'Aparecido',
+//         idade: 90,
+//         nomeCompleto: function() {
+//                return `${this.nome} ${this.sobrenome}`;
+//         }
+// }
+
+// console.log(pessoa.nomeCompleto());
+// __________________________________________________
+// ##O loop for
+
+// for (let n = 0; n < 10; n++) {
+//         console.log("Frase Qualquer " + n);
+// }
+// __________________________________________________
+// ##Dando loop em arrays
+
+// let cores = ['preto', 'branco', 'azul', 'vermelho'];
+// cores.push('verde');
+
+// for (let n = 0; n < cores.length; n++) {
+//         console.log(cores[n]);
+// }
+
+// let cores = [
+//         { nome: 'preto', qt: 10 },
+//         { nome: 'azul', qt: 5 },
+//         { nome: 'vermelho', qt: 15 }
+                                                                                                                        
+// ];
+
+// for (let i in cores) {
+//         cores[i].nome = cores[i].nome.toUpperCase();
+// }
+
+// console.log(cores);
+
+// for (let cor of cores) {
+//         console.log(cores.nome);
+// }
+
+// for (let cor of cores) {
+//         console.log(`Nome: ${cor.nome} - ${cor.qt}`);
+// }
+// __________________________________________________
+// ##O loop while
+
+// let numero = 0;
+
+// while (numero < 10) {
+//         console.log(`O numero da vez é ${numero}`);
+//         numero++;
+// }
+
+// for (let numero = 0; numero <= 10; numero++) {
+//         console.log(`O numero da vez é ${numero}`);
+// }
+// __________________________________________________
+// ##Exercícios de loops
+// 1. Faça um loop que mostre todas as frutas
+// let fruits = ['Maça', 'Uva', 'Banana'];
+// for (let x in fruits) {
+//         console.log(fruits[x]);
+// }
+
+// 2. Conte de 1 até 100 através de um While
+// let n = 1;
+// while(n <= 100) {
+//         console.log(n);
+//         n++;
+// }
