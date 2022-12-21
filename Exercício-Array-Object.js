@@ -101,3 +101,94 @@ valorComida = hamburguer1.valor + hamburguer2.valor + hamburguer3.valor;
 
 texto = `A compra do ${hamburguer1.nome}(${hamburguer1.ingredientes[0]}), ${hamburguer2.nome}, ${hamburguer3.nome} tem o valor total de ${valorComida} reais`
 console.log(`Contexto 4/4: ${texto}`)
+
+// ______________________________________________________________________________________________________________________________________________________
+// CONTEXTO 5
+
+let exercicio = ['flexão', 'barra', 'abdominal', 'agachamento', 'alongamento'];
+
+console.log(exercicio);
+
+exercicio = [
+    {
+    exercicioA: {
+        musculo: 'peito',
+        tipoExercicio: ['supino', 'fly']
+    }
+    },
+    {
+    exercicioB: {
+        musculo: 'costas',
+        tipoExercicio: ['remada alta', 'remada unilateral']
+    }
+        
+    }
+];
+
+console.log(exercicio)
+console.log(exercicio[0].exercicioA.tipoExercicio);
+
+
+exercicio = [
+    {
+        tipo: {
+            nome: 'A', 
+            musculo: 'Peito'
+        },
+        exercicios: ['supino', 'fly']
+    },
+    {
+        tipo: {
+            nome:'B',
+            musculo: 'costas',
+        },
+        exercicios: ['remada alta', 'remada unilateral']
+    },
+    {
+        tipo: {
+            nome: 'A', 
+            musculo: 'Peito'
+        },
+        exercicios: ['supino Inclinado', 'fly com alteres']
+    },
+]
+ /**
+  * Sintaxe Object
+  * { //identificador genêrico: Valor (Array, objeto, string, booleano, função...)
+  *   chave:valor,
+  * }
+  */
+
+console.log(`Exercicios de ${exercicio[0].tipo.musculo} do tipo ${exercicio[0].tipo.nome}: ${exercicio[0].exercicios}`)
+
+
+// Treino de segunda  a quarta com vários tipos de exercicios diferentes
+// quando for finito criar em formato de objeto
+
+let diasSemana = {
+    segunda: {
+        tipo: {
+            nome: 'A',
+            categoria: 'Treino Superior'
+        },
+        exercicio: [
+        {
+        musculo: 'peito',
+        tipoExercicio: 'supino reto'
+        }, 
+        {
+        musculo: 'peito',
+        tipoExercicio: 'supino inclinado'  
+        },
+        {
+        musculo: 'costas',
+        tipoExercicio: 'remada alta'
+        }
+        ],
+    }
+}
+
+//Exibir conforme o exemplo:
+// Treino Superior dos exercicios costas, remada alta...
+
+console.log(diasSemana.segunda.exercicio[2].tipoExercicio);
