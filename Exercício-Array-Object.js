@@ -192,3 +192,4 @@ let diasSemana = {
 // Treino Superior dos exercicios costas, remada alta...
 
 console.log(diasSemana.segunda.exercicio[2].tipoExercicio);
+console.log(`O ${diasSemana.segunda.tipo.categoria} dos exercícios ${diasSemana.segunda.exercicio[2].musculo}, ${diasSemana.segunda.exercicio[2].tipoExercicio}`);
